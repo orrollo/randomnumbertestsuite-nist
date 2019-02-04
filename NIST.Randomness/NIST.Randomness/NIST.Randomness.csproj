@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0478622-F155-43E1-8122-0237C389D690}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NIST.Randomness</RootNamespace>
+    <AssemblyName>NIST.Randomness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ApproximateEntropy.cs" />
+    <Compile Include="Tests\BlockFrequency.cs" />
+    <Compile Include="Tests\CumulativeSums.cs" />
+    <Compile Include="Tests\DiscreteFourierTransform.cs" />
+    <Compile Include="Tests\Frequency.cs" />
+    <Compile Include="Tests\LinearComplexity.cs" />
+    <Compile Include="Tests\LongestRunOfOnes.cs" />
+    <Compile Include="Tests\NonOverlappingTemplateMatching.cs" />
+    <Compile Include="Tests\OverlappingTemplateMatching.cs" />
+    <Compile Include="Tests\RandomExcursions.cs" />
+    <Compile Include="Tests\RandomExcursionsVariant.cs" />
+    <Compile Include="Tests\Rank.cs" />
+    <Compile Include="Tests\Runs.cs" />
+    <Compile Include="Tests\Serial.cs" />
+    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Tests\Universal.cs" />
+    <Compile Include="Utils\Cephes.cs" />
+    <Compile Include="Utils\FFT.cs" />
+    <Compile Include="Utils\Report.cs" />
+    <Compile Include="Utils\Util.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\dataInfo" />
+    <EmbeddedResource Include="Resources\template10" />
+    <EmbeddedResource Include="Resources\template11" />
+    <EmbeddedResource Include="Resources\template12" />
+    <EmbeddedResource Include="Resources\template13" />
+    <EmbeddedResource Include="Resources\template14" />
+    <EmbeddedResource Include="Resources\template15" />
+    <EmbeddedResource Include="Resources\template16" />
+    <EmbeddedResource Include="Resources\template17" />
+    <EmbeddedResource Include="Resources\template18" />
+    <EmbeddedResource Include="Resources\template19" />
+    <EmbeddedResource Include="Resources\template2" />
+    <EmbeddedResource Include="Resources\template20" />
+    <EmbeddedResource Include="Resources\template21" />
+    <EmbeddedResource Include="Resources\template3" />
+    <EmbeddedResource Include="Resources\template4" />
+    <EmbeddedResource Include="Resources\template5" />
+    <EmbeddedResource Include="Resources\template6" />
+    <EmbeddedResource Include="Resources\template7" />
+    <EmbeddedResource Include="Resources\template8" />
+    <EmbeddedResource Include="Resources\template9" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
